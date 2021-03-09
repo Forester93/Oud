@@ -130,6 +130,32 @@ header p {
   position: relative;
 }
 
+.addToCart:hover::after {
+  content: "💚";
+  transform: scale(2);
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  animation: fly 0.4s linear forwards;
+}
+.removeFromCart:hover::after {
+  content: "💔";
+  transform: scale(2);
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  animation: fly 0.4s linear forwards;
+}
+
+@keyframes fly {
+  99% {
+    bottom: 20vh;
+    transform: scale(0.1);
+  }
+  100% {
+    display: none;
+  }
+}
 /*styling the label with the price*/
 .price {
   left: 50%;
